@@ -1,0 +1,19 @@
+{
+  "user_id": "UIDXYZ",
+  "deployment_descriptor_yaml": "UC1-Deployment-Descriptor-YAML",
+  "application_constraints": [
+    {
+      "Service_Level_UpTime": "> 97 %",
+      "Service_Level_Reliability_Overall": "HIGH",
+      "Data_Storage_Volume": "< 1 GB",
+      "Data_Storage_Geographical_Location": "Europe",
+      "Network_Latency": "LOW",
+      "Security_Data_Data_Encryption_Algorithm": "AES-GCM-256",
+      "Privacy_Data_Nature": "SENSITIVE-DATA",
+      "Legal_Framework": "GDPR-compliant",
+      "Data_Storage_Cost": "LOW",
+      "Deployment_Duration_Overall": "SHORT-TERM"
+    }
+  ],
+  "application_workflow": [ ]
+}

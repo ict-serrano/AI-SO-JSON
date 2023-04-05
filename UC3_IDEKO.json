@@ -1,0 +1,35 @@
+{
+  "user_id": "UIDXYZ",
+  "deployment_descriptor_yaml": "UC3_descriptor.yaml",
+  "application_constraints": [
+    {
+      "Service_Level_UpTime": ">/= 97 %",
+      "Service_Level_Error_Margin": "</= 3 %",
+      "Application_Performance_Response_Latency": "</= 12 sec",
+      "Data_Storage_Data_Type": "CSV",
+      "Data_Storage_Volume": "</= 4 GB",
+      "Data_Storage_Duration": "SHORT-TERM",
+      "Data_Transfer_Input_Data_Type": "CSV",
+      "Data_Transfer_Input_Data_Volume": "</= 9 MB",
+      "Data_Transfer_Output_Data_Type": "JSON",
+      "Data_Transfer_Output_Data_Volume": "</= 1 KB",
+      "Security_Data_Encryption_Parameters": "",
+      "Security_Data_Data_Encryption_Algorithm": "AES-GCM-256",
+      "Privacy_Data_Nature": "SENSITIVE-DATA",
+      "Legal_Framework": "GDPR-compliant",
+      "Technical_Details_Programming_Language": "Python",
+      "Technical_Details_Operating_System": "Linux"
+    }
+  ],
+  "application_workflow": [ 
+	{
+      "component_id": "data_manager"
+    }, 
+	{
+      "component_id": "classifier_training"
+	}, 
+	{
+      "component_id": "model_inference"
+    }
+  ]
+}

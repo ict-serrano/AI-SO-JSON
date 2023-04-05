@@ -1,0 +1,65 @@
+{
+  "user_id": "UIDXYZ",
+  "deployment_descriptor_yaml": "YAML-File",
+  "application_constraints": [{
+      "Usage_Demand_Total_Number_of_Users": "> 4000",
+      "Usage_Demand_Number_of_Concurrent_Users": ">/= 10",
+      "Usage_Demand_Number_of_Concurrent_Requests": " >/= 10",
+      "Usage_Demand_Number_of_Instances": "1",
+      "Service_Level_UpTime": ">/= 97 %",
+      "Service_Level_Reliability_Overall": "HIGH",
+      "Application_Performance_Parallelization": "NO",
+      "Data_Storage_Volume": "> 20 GB",
+      "Data_Storage_Duration": "SHORT-TERM",
+      "Data_Storage_Period_of_Time": "",
+      "Data_Storage_Proximity_to_User": "NO",
+      "Data_Storage_Geographical_Location": "Europe",
+      "Data_Transfer_Input_Data_Type": "CSV-AND-XLSX",
+      "Data_Transfer_Input_Data_Volume": "> 20 GB",
+      "Data_Transfer_Output_Data_Type": "XLSX",
+      "Data_Transfer_Output_Data_Volume": "</= 1 MB",
+      "Security_Data_Data_Encryption_Algorithm": "AES-GCM",
+      "Privacy_Data_Nature": "SENSITIVE-DATA",
+      "Legal_Framework": "GDPR-compliant",
+      "Energy_Consumption": "MEDIUM",
+      "Overall_Cost": "HIGH",
+      "Data_Storage_Cost": "LOW",
+      "Data_Access_Cost": "LOW",
+      "Technical_Details_Programming_Language": "Python",
+      "Technical_Details_Operating_System": "LINUX-OR-WINDOWS",
+      "Technical_Details_Software_Environment": "Python-3",
+      "Technical_Details_Software_Dependencies": [ ]
+    } ],
+  "application_workflow": [ {
+      "component_id": "get_data"
+    },
+	{
+      "component_id": "analyse_market",
+      "previous_component_id": ["get_data"]
+    },
+	{
+      "component_id": "forecasting_1",
+      "previous_component_id": ["analyse_market"]
+    },
+	{
+      "component_id": "apply_investment_strategies",
+      "previous_component_id": ["analyse_market"]
+    },
+	{
+      "component_id": "create_investment_profile",
+      "previous_component_id": [ "forecasting_1", "apply_investment_strategies" ]
+    },
+	{
+      "component_id": "forecasting_2",
+      "previous_component_id": ["create_investment_profile"]
+    },
+	{
+      "component_id": "back_testing",
+      "previous_component_id": ["create_investment_profile"]
+    },
+	{
+      "component_id": "rebalancing",
+      "previous_component_id": [ "create_investment_profile", "forecasting_2" ]
+    }
+  ]
+}
